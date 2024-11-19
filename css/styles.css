@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+body{
+    background: rgb(230, 230, 230);
+    padding: 90px 20px 0;
+}
+.header{
+    color: white;
+    background-color: black;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-bar{
+    max-width: 992px;
+    margin: 0 auto;
+}
+.nav-links{
+    color: white;
+    text-decoration: none;
+    padding: 18px 10px;
+}
+.nav-links:hover,
+.instagram-btn:hover{
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+    cursor: pointer;
+}
+.nav-menu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+.nav-menu-items{
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+.nav-toogle{
+    background: none;
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+    cursor: pointer;
+}
+.instagram-btn{
+    color: white;
+    text-decoration: none;
+    padding: 18px 10px;
+    line-height: 80px;
+}
+#instragram-user{
+    display: none;
+}
+
+@media (max-width: 768px){
+    .header{
+        height: 60px;
+        align-items: center;
+    }
+    .logo{
+        font-size: 25px;
+        font-weight: bold;
+        padding: 0 20px;
+        line-height: 60px;
+        cursor: pointer;
+    }
+    #instragram-user{
+        display: block;
+    }
+    .nav-menu{
+        flex-direction: column;
+        background-color: black;
+        position: fixed;
+        left: 0;
+        transition: 0.3s;
+        top: 60px;
+        width: 100%;
+        align-items: center;
+        border-color: white;
+        height: 0;
+        overflow-y: auto;
+    }
+    .nav-menu-visible{
+        height: calc(80% - 60px);
+        border-radius: 0 0 20px 20px;
+    }
+    .nav-menu-items{
+        line-height: 70px;
+        margin: 20px 0;
+    }
+    .nav-links{
+        font-size: 20px;
+        padding: 18px 70px;
+    }
+    .nav-toogle{
+        background: none;
+        color: white;
+        border: none;
+        font-size: 30px;
+        padding: 0 20px;
+        line-height: 60px;
+        display: none;
+        cursor: pointer;
+    }
+    .nav-toogle{
+        display: block;
+    }
+}
